@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+      <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.AnasayfaFragment">
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+              <com.google.android.material.card.MaterialCardView
+                  android:id="@+id/materialCardView"
+                  android:layout_width="match_parent"
+                  android:layout_height="150dp"
+                  android:layout_margin="10dp"
+                  app:cardCornerRadius="20dp"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"
+                  tools:ignore="MissingConstraints">
+
+                  <LinearLayout
+                      android:id="@+id/ll_cadview"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="@drawable/cv_bacground"
+                      android:orientation="horizontal">
+
+                      <LinearLayout
+                          android:layout_width="wrap_content"
+                          android:layout_height="match_parent"
+                          android:orientation="vertical">
+
+                          <TextView
+                              android:id="@+id/tv_merhaba"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginLeft="25dp"
+                              android:layout_marginTop="20dp"
+                              android:layout_weight="1"
+                              android:fontFamily="@font/os_regular"
+                              android:text="Merhaba"
+                              android:textColor="@color/white"
+                              android:textSize="17sp">
+
+                          </TextView>
+
+                          <TextView
+                              android:id="@+id/tv_personalName"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginLeft="25dp"
+                              android:layout_weight="5"
+                              android:fontFamily="@font/os_regular"
+                              android:onClick="name"
+                              android:text="Adiniz"
+                              android:textColor="@color/white"
+                              android:textSize="20sp"
+                              android:textStyle="bold">
+
+                          </TextView>
+
+
+                      </LinearLayout>
+
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:orientation="vertical">
+
+                          <TextView
+                              android:id="@+id/tv_harcama"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="20dp"
+                              android:layout_marginRight="25dp"
+                              android:layout_weight="1"
+                              android:fontFamily="@font/os_regular"
+                              android:gravity="right"
+                              android:text="Harcamanız"
+                              android:textColor="@color/white"
+                              android:textSize="17sp">
+
+                          </TextView>
+
+                          <TextView
+                              android:id="@+id/tv_total"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginRight="25dp"
+                              android:layout_weight="3"
+                              android:fontFamily="@font/os_regular"
+                              android:gravity="right"
+                              android:text="Total Tutar"
+                              android:textColor="@color/white"
+                              android:textSize="20sp"
+                              android:textStyle="bold">
+
+                          </TextView>
+
+                      </LinearLayout>
+
+                  </LinearLayout>
+
+              </com.google.android.material.card.MaterialCardView>
+
+              <LinearLayout
+                  android:id="@+id/ll_buton"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="15dp"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+                  >
+
+
+                  <com.google.android.material.button.MaterialButton
+                      android:id="@+id/btn_tl"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="5dp"
+                      android:background="@drawable/btn_bg"
+                      android:text="TL"
+                      android:textColor="@color/lightblack"
+                      android:textSize="15sp"
+                      android:layout_weight="1"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+                      android:layout_margin="2dp"
+                      >
+                  </com.google.android.material.button.MaterialButton>
+                  <Button
+                      android:id="@+id/btn_sterlin"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="10dp"
+                      android:background="@drawable/btn_bg"
+                      android:text="Sterlın"
+                      android:textColor="@color/lightblack"
+                      android:layout_weight="1"
+                      android:textSize="15sp"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+                      android:layout_margin="2dp" >
+                  </Button>
+
+                  <Button
+                      android:id="@+id/btn_euro"
+                      android:background="@drawable/btn_bg"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="10dp"
+                      android:text="Euro"
+                      android:textColor="@color/lightblack"
+                      android:textSize="15sp"
+                      android:layout_weight="1"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+                      android:layout_margin="2dp">
+                  </Button>
+                  <Button
+                      android:id="@+id/btn_dolar"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="10dp"
+                      android:background="@drawable/btn_bg"
+                      android:text="Dolar"
+                      android:textColor="@color/lightblack"
+                      android:layout_marginEnd="5dp"
+                      android:layout_weight="1"
+                      android:textSize="15sp"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+                      android:layout_margin="2dp">
+                  </Button>
+              </LinearLayout>
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/rv_spendingList"
+                  android:layout_marginTop="15dp"
+                  android:layout_width="0dp"
+                  android:layout_height="0dp"
+                  android:layout_marginStart="3dp"
+                  android:layout_marginEnd="3dp"
+                  android:layout_marginBottom="1dp"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintHorizontal_bias="0.0"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/ll_buton" />
+
+              <TextView
+                android:id="@+id/tv_spendingError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Error! Try Again"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone">
+
+            </TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</layout>

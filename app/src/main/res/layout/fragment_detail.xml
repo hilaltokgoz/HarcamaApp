@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.DetailFragment">
+
+
+       <ImageView
+           android:id="@+id/iv_left"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:minWidth="60dp"
+           android:minHeight="60dp"
+           android:layout_marginStart="15dp"
+           android:layout_marginTop="30dp"
+           android:background="@drawable/ic_baseline_chevron_left_24"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent">
+       </ImageView>
+
+       <ImageView
+           android:id="@+id/iv_detail_ikon"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:minHeight="150dp"
+           android:minWidth="150dp"
+           android:layout_marginTop="40dp"
+           android:background="@mipmap/ic_launcher"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/iv_left">
+       </ImageView>
+
+       <TextView
+           android:id="@+id/tv_detail_name"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/iv_detail_ikon"
+           android:layout_margin="40dp"
+           android:text="Harcama Adı"
+           android:textSize="30sp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/iv_detail_ikon">
+       </TextView>
+
+       <TextView
+           android:id="@+id/tv_detail_amount"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/tv_detail_name"
+           android:layout_margin="30dp"
+           android:text="Tutar TL"
+           android:textSize="30sp"
+           android:textStyle="bold"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/tv_detail_name">
+       </TextView>
+
+       <com.google.android.material.button.MaterialButton
+           android:id="@+id/btn_detail_sil"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_margin="50dp"
+           android:backgroundTint="@color/orange"
+           android:text="SİL"
+           android:textColor="@color/white"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/tv_detail_amount">
+       </com.google.android.material.button.MaterialButton>
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
