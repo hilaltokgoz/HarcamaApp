@@ -49,7 +49,7 @@
         android:layout_weight="1"
         android:textSize="20sp"
         android:padding="5dp"
-        android:text="Tutarı(TL)"
+        android:text="Tutar TL"
         android:gravity="center"
         android:textStyle="bold">
 
