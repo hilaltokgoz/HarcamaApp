@@ -182,19 +182,37 @@
                   </Button>
               </LinearLayout>
 
+
               <androidx.recyclerview.widget.RecyclerView
                   android:id="@+id/rv_spendingList"
-                  android:layout_marginTop="15dp"
                   android:layout_width="0dp"
                   android:layout_height="0dp"
                   android:layout_marginStart="3dp"
+                  android:layout_marginTop="15dp"
                   android:layout_marginEnd="3dp"
-                  android:layout_marginBottom="1dp"
+
+
                   app:layout_constraintBottom_toBottomOf="parent"
                   app:layout_constraintEnd_toEndOf="parent"
-                  app:layout_constraintHorizontal_bias="0.0"
+                  app:layout_constraintHorizontal_bias="1.0"
                   app:layout_constraintStart_toStartOf="parent"
-                  app:layout_constraintTop_toBottomOf="@+id/ll_buton" />
+                  app:layout_constraintTop_toBottomOf="@+id/ll_buton"
+                  app:layout_constraintVertical_bias="0.0" />
+
+              <com.google.android.material.button.MaterialButton
+                  android:id="@+id/btn_add_spending"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginEnd="52dp"
+                  android:layout_marginBottom="64dp"
+                  android:backgroundTint="@color/yellow"
+                  android:text="+ EKLE"
+                  android:textSize="20dp"
+                  app:cornerRadius="25dp"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent">
+
+              </com.google.android.material.button.MaterialButton>
 
               <TextView
                 android:id="@+id/tv_spendingError"
@@ -208,6 +226,7 @@
                 android:visibility="gone">
 
             </TextView>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 

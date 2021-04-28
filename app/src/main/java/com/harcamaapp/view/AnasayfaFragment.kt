@@ -51,6 +51,10 @@ class AnasayfaFragment : Fragment() {
             Navigation.findNavController(it).navigate(action)//geçiş işlemi
         }
 
+        btn_add_spending.setOnClickListener {
+            val action=AnasayfaFragmentDirections.actionAnasayfaFragment2ToAddSpendingFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
 
 
         observeLiveData()//fonk çağrıldı.

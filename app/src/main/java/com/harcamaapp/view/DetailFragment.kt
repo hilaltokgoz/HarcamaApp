@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation
 import com.harcamaapp.R
 import com.harcamaapp.viewmodel.DetailViewModel
 import kotlinx.android.synthetic.main.fragment_detail.*
@@ -31,6 +32,16 @@ class DetailFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_detail, container, false)
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        iv_left.setOnClickListener {
+            val action=DetailFragmentDirections.actionDetailFragmentToAnasayfaFragment2()
+            Navigation.findNavController(it).navigate(action)
+        }
+    }
+
+
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)

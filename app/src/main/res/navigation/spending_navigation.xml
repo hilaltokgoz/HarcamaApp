@@ -38,5 +38,8 @@
             android:name="spendingUuid"
             app:argType="integer"
             android:defaultValue="0" />
+        <action
+            android:id="@+id/action_detailFragment_to_anasayfaFragment2"
+            app:destination="@id/anasayfaFragment2" />
     </fragment>
 </navigation>
