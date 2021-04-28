@@ -3,9 +3,11 @@ package com.harcamaapp.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.harcamaapp.R
 import com.harcamaapp.model.Spending
+import com.harcamaapp.view.AnasayfaFragmentDirections
 import kotlinx.android.synthetic.main.item_spending_list.view.*
 
 ///dışardan arraylist isticez.RecylerviewList için adapter yazdık.
@@ -27,8 +29,11 @@ class SpendingAdapter (val spendingList:ArrayList<Spending>):RecyclerView.Adapte
 
         //imageView glaide ile gösterilecek.
 
-
-
+        //view e tıklanınca ne olacak
+     holder.view.setOnClickListener {
+      val action=AnasayfaFragmentDirections.actionAnasayfaFragment2ToDetailFragment()
+         Navigation.findNavController(it).navigate(action)
+     }
 
     }
 
@@ -41,8 +46,5 @@ class SpendingAdapter (val spendingList:ArrayList<Spending>):RecyclerView.Adapte
         spendingList.addAll(newSpendingList)
         notifyDataSetChanged()//adapterı yenileme metodu
 
-
     }
-
-
 }

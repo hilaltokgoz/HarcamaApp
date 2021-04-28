@@ -46,15 +46,15 @@ class AnasayfaFragment : Fragment() {
          rv_spendingList.layoutManager=LinearLayoutManager(context) //LinearLayoutManager row ları alt alta göstermemeise olanak sağlar.
          rv_spendingList.adapter=spendinAdapter
 
-      /* button.setOnClickListener {
-           val action= AnasayfaFragmentDirections.actionAnasayfaFragment2ToAddSpendingFragment()
+      tv_personalName.setOnClickListener {
+           val action= AnasayfaFragmentDirections.actionAnasayfaFragment2ToPersonalInformationFragment()
             Navigation.findNavController(it).navigate(action)//geçiş işlemi
         }
-*/
+
+
+
         observeLiveData()//fonk çağrıldı.
     }
-
-
      //Oluşturulan LiveData ları kullanıdk.
     private fun observeLiveData(){
           viewModel.spending.observe(viewLifecycleOwner, Observer { spending-> //spending boş mu dolu mu kontrolü için
@@ -64,9 +64,6 @@ class AnasayfaFragment : Fragment() {
 
               }
           })
-
-
-
       }
 
 
