@@ -58,7 +58,23 @@ class AnasayfaFragment : Fragment() {
 
 
         observeLiveData()//fonk çağrıldı.
+
+        btn_tl.setOnClickListener {
+            viewModel.toTry()
+        }
+
+        btn_sterlin.setOnClickListener {
+
+        }
+
+
+
+
+
     }
+
+
+
      //Oluşturulan LiveData ları kullanıdk.
     private fun observeLiveData(){
           viewModel.spending.observe(viewLifecycleOwner, Observer { spending-> //spending boş mu dolu mu kontrolü için
